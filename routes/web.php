@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilmesController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/filmes', [FilmesController::class, 'index'])->name('blog.filmes');
+
